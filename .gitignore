@@ -30,5 +30,4 @@ config/secrets.yml
 *.bowerrc
 bower.json
 
-*.rdb
 *.gem
