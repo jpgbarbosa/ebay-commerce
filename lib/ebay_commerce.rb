@@ -1,0 +1,1 @@
+require 'ebay_commerce/client'
