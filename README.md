@@ -1,4 +1,4 @@
-ebay-commerce
-=============
+ebay_commerce
+==========
 
-ebaycommerce-api
+A rails wrapper for ebay_commerce API
