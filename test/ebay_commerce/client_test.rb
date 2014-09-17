@@ -32,9 +32,13 @@ describe EbayCommerce::Client do
         @config = {
           :api_key    => 'ak',
           :format     => 'of',
-          :endpoint   => 'ep',
+          :development_endpoint   => 'dev_ep',
+          :production_endpoint   => 'prod_ep',
           :user_agent => 'ua',
           :method     => 'hm',
+          :zone       => "z",
+          :version    => "v",
+          :tracking_id => "tid"
         }
       end
 
