@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ebay-commerce (0.0.1)
+    ebay_commerce (0.0.1)
       httparty (~> 0.12)
 
 GEM
@@ -75,7 +75,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.5)
-  ebay-commerce!
+  ebay_commerce!
   guard
   guard-rspec
   pry

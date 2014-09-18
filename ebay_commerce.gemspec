@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ebay_commerce/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ebay-commerce"
+  spec.name          = "ebay_commerce"
   spec.version       = EbayCommerce::VERSION
   spec.authors       = ["João Barbosa"]
   spec.email         = ["j.barbosa333@gmail.com"]
