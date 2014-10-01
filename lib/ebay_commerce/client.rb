@@ -38,7 +38,7 @@ module EbayCommerce
       url = ""
       url += options[:endpoint]
       url += "/"+EbayCommerce.options[:version]+"/"+EbayCommerce.options[:format].to_s
-      base_uri url
+      self.class.base_uri url
 
       # Merge the config values from the module and those passed
       # to the client.
