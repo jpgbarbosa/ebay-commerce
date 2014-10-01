@@ -9,11 +9,6 @@ module EbayCommerce
   class Client
     include HTTParty
 
-    url = ""
-    url += ENV['RAILS_ENV'] == "production" ? EbayCommerce.options[:production_endpoint] : EbayCommerce.options[:development_endpoint]
-    url += "/"+EbayCommerce.options[:version]+"/"+EbayCommerce.options[:format].to_s
-    base_uri url
-
     headers 'User-Agent' => EbayCommerce.options[:user_agent]
 
     class << self
@@ -38,8 +33,12 @@ module EbayCommerce
 
     def initialize(options={})
       # Merge the config values from the module and those passed to the class.
-      options.delete(:endpoint)
       options.delete_if { |k, v| v.nil? }
+
+      url = ""
+      url += options[:endpoint]
+      url += "/"+EbayCommerce.options[:version]+"/"+EbayCommerce.options[:format].to_s
+      base_uri url
 
       # Merge the config values from the module and those passed
       # to the client.
@@ -54,7 +53,6 @@ module EbayCommerce
 
     def general_search params
       response = make_get_request("/GeneralSearch", authentication_params.merge(params))
-      # puts response
     end
 
     private
