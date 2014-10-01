@@ -6,9 +6,6 @@ module EbayCommerce
     VALID_OPTIONS_KEYS    = [:api_key, :format, :tracking_id].freeze
     VALID_CONFIG_KEYS     = VALID_CONNECTION_KEYS + VALID_OPTIONS_KEYS
 
-    # DEFAULT_DEVELOPMENT_ENDPOINT    = 'http://sandbox.api.ebaycommercenetwork.com/publisher'
-    # DEFAULT_PRODUCTION_ENDPOINT   = 'http://api.ebaycommercenetwork.com/publisher'
-
     DEFAULT_VERSION     = "3.0"
     DEFAULT_METHOD      = :get
     DEFAULT_USER_AGENT  = "EbayCommerce API Ruby Gem #{EbayCommerce::VERSION}".freeze

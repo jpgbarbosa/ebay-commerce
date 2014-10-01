@@ -35,11 +35,6 @@ module EbayCommerce
       # Merge the config values from the module and those passed to the class.
       options.delete_if { |k, v| v.nil? }
 
-      url = ""
-      url += options[:endpoint]
-      url += "/"+EbayCommerce.options[:version]+"/"+EbayCommerce.options[:format].to_s
-      self.class.base_uri url
-
       # Merge the config values from the module and those passed
       # to the client.
       @merged_options = EbayCommerce.options.merge(options)
@@ -49,6 +44,11 @@ module EbayCommerce
       Configuration::VALID_CONFIG_KEYS.each do |key|
         send("#{key}=", @merged_options[key])
       end
+
+      url = ""
+      url += @merged_options[:endpoint]
+      url += "/"+@merged_options[:version].to_s+"/"+@merged_options[:format].to_s
+      self.class.base_uri url
     end
 
     def general_search params
